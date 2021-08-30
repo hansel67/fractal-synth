@@ -1,4 +1,4 @@
-# fractal-synth
+# fsynth
 
 this is a simple synth coded in python that features some fractal waveforms
 
