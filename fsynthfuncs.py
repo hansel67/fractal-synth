@@ -1,7 +1,5 @@
 import math as m
 import numpy as np
-import numpy.random as rnd
-import cmath as cpx
 import wave, struct
 
 #here are some utility functions
@@ -67,11 +65,13 @@ def takagi(x,w,iter): #Takagi-Landsberbg f'n, continuous if |w|<1 and nowhere di
         retval += tri(x*m.pow(2.0,i))*m.pow(w,i)
     return retval
 
-def weierstraussr(x,a,b,iter): #weierstrauss f'n, classically a=0.5 and b=2
+def weierstrauss(x,a,b,iter): #weierstrauss f'n, classically a=0.5 and b=2
     retval = 0
     for i in range(1,iter):
         retval += m.sin(2*m.pi*x*pow(b,i))*pow(a,i)
     return retval
+
+#finally our write function
 
 def render(path,samples,sampleRate):
     obj = wave.open(path+'.wav','w')
