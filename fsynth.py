@@ -2,7 +2,6 @@ import fsynthfuncs as f
 import math as m
 import numpy as np
 import os
-import cmath as cpx
 import matplotlib.pyplot as plt
 
 MIDDLEC = 261.625565
